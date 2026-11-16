@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Бухгалтерский налоговый календарь 2026–2027 — Smartway</title>
+  <meta name="description" content="Календарь бухгалтера: сроки отчетности и уплаты налогов. Просмотр по месяцам и в таблице.">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+<main class="accountant-calendar">
+  <section class="intro" aria-labelledby="page-title">
+    <h1 id="page-title">Бухгалтерский налоговый календарь<br>на 15 января 2027 года</h1>
+    <p>Проверяйте сроки сдачи бухгалтерской и налоговой отчетности, уплаты налогов и страховых взносов, а также подачи уведомлений по ЕНП. Выберите год, месяц и нужный формат — календарь или таблицу</p>
+    <div class="years" role="group" aria-label="Год календаря">
+      <button type="button" data-year="2026" aria-pressed="false">2026</button>
+      <button type="button" data-year="2027" aria-pressed="true">2027</button>
+    </div>
+  </section>
+
+  <section class="calendar" aria-label="Календарь отчетности">
+    <div class="calendar-controls">
+    <div class="filters">
+      <label class="filter filter--month" hidden><span class="sr-only">Месяц</span><span class="filter__value" id="table-month-label" aria-hidden="true">Месяц</span><select id="table-month"><option value="all">Месяц</option><option value="0">Январь</option><option value="1">Февраль</option><option value="2">Март</option><option value="3">Апрель</option><option value="4">Май</option><option value="5">Июнь</option><option value="6">Июль</option><option value="7">Август</option><option value="8">Сентябрь</option><option value="9">Октябрь</option><option value="10">Ноябрь</option><option value="11">Декабрь</option></select><img src="./images/chevron.svg" alt="" width="13" height="7.5"></label>
+      <label class="filter"><span class="sr-only">Вид отчетности</span><select id="category"><option value="all">Все виды отчётности</option><option value="ndfl">НДФЛ</option><option value="nds">НДС</option><option value="profit">Налог на прибыль</option><option value="insurance">Страховые взносы и РСВ</option><option value="property">Имущественные налоги</option><option value="enp">Уведомления по ЕНП</option><option value="accounting">Бухгалтерская отчётность</option><option value="sfr">Отчётность в СФР</option></select><img src="./images/chevron.svg" alt="" width="13" height="7.5"></label>
+      <label class="filter"><span class="sr-only">Тип события</span><select id="event-type"><option value="all">Все типы событий</option><option value="payment">Платёж</option><option value="filing">Отчёт</option><option value="notice">Уведомление</option></select><img src="./images/chevron.svg" alt="" width="13" height="7.5"></label>
+    </div>
+    <div class="calendar-toolbar">
+      <h2 class="mobile-table-month-title" id="mobile-table-month-title">Январь 2027</h2>
+      <div class="mobile-month-nav">
+        <button class="month-arrow month-arrow--prev month-arrow--mobile" type="button" aria-label="Предыдущий месяц"><img src="./images/mobile-arrow-prev.svg" width="29" height="29.0001" alt=""></button>
+        <p id="mobile-month-title"><span data-slider-title="0" hidden>Январь 2026</span><span data-slider-title="1" hidden>Февраль 2026</span><span data-slider-title="2" hidden>Март 2026</span><span data-slider-title="3" hidden>Апрель 2026</span><span data-slider-title="4" hidden>Май 2026</span><span data-slider-title="5" hidden>Июнь 2026</span><span data-slider-title="6" hidden>Июль 2026</span><span data-slider-title="7" hidden>Август 2026</span><span data-slider-title="8" hidden>Сентябрь 2026</span><span data-slider-title="9" hidden>Октябрь 2026</span><span data-slider-title="10" hidden>Ноябрь 2026</span><span data-slider-title="11" hidden>Декабрь 2026</span><span data-slider-title="12">Январь 2027</span><span data-slider-title="13" hidden>Февраль 2027</span><span data-slider-title="14" hidden>Март 2027</span><span data-slider-title="15" hidden>Апрель 2027</span><span data-slider-title="16" hidden>Май 2027</span><span data-slider-title="17" hidden>Июнь 2027</span><span data-slider-title="18" hidden>Июль 2027</span><span data-slider-title="19" hidden>Август 2027</span><span data-slider-title="20" hidden>Сентябрь 2027</span><span data-slider-title="21" hidden>Октябрь 2027</span><span data-slider-title="22" hidden>Ноябрь 2027</span><span data-slider-title="23" hidden>Декабрь 2027</span></p>
+        <button class="month-arrow month-arrow--next month-arrow--mobile" type="button" aria-label="Следующий месяц"><img src="./images/mobile-arrow-next.svg" width="29" height="29.0001" alt=""></button>
+      </div>
+      <button class="view-switch" type="button" aria-pressed="false" aria-controls="table-view"><span><img src="./images/switch.svg" width="12" height="12" alt=""><span id="view-label">Сделать таблицей</span></span><img class="view-switch__line view-switch__line--table" src="./images/underline.svg" alt="" width="141" height="1"><img class="view-switch__line view-switch__line--calendar" src="./images/underline-calendar.svg" alt="" width="164" height="1" hidden></button>
+    </div>
+    </div>
+    <div class="months-viewport" id="calendar-view">
+      <div class="months-track" id="months">
+          <article class="month" aria-label="Январь 2026" data-month="0" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="0" data-year="2026">Январь 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:4">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Февраль 2026" data-month="1" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="1" data-year="2026">Февраль 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:7">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Март 2026" data-month="2" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="2" data-year="2026">Март 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:7">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Апрель 2026" data-month="3" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="3" data-year="2026">Апрель 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:3">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Май 2026" data-month="4" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="4" data-year="2026">Май 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:5">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Июнь 2026" data-month="5" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="5" data-year="2026">Июнь 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:1">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Июль 2026" data-month="6" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="6" data-year="2026">Июль 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:3">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Август 2026" data-month="7" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="7" data-year="2026">Август 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:6">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Сентябрь 2026" data-month="8" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="8" data-year="2026">Сентябрь 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:2">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Октябрь 2026" data-month="9" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="9" data-year="2026">Октябрь 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:4">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Ноябрь 2026" data-month="10" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="10" data-year="2026">Ноябрь 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:7">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Декабрь 2026" data-month="11" data-year="2026">
+            <h2><a class="month__link" href="#" data-month="11" data-year="2026">Декабрь 2026</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:2">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month is-selected is-in-view" aria-label="Январь 2027" data-month="0" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="0" data-year="2027" aria-current="date">Январь 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:5">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <a class="day has-event" href="#" data-date="2027-01-15" aria-label="15 января 2027, есть событие" aria-current="date">15</a>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Февраль 2027" data-month="1" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="1" data-year="2027">Февраль 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:1">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <a class="day has-event" href="#" data-date="2027-02-05" aria-label="5 февраля 2027, есть событие">5</a>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <a class="day has-event" href="#" data-date="2027-02-13" aria-label="13 февраля 2027, есть событие">13</a>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <a class="day has-event" href="#" data-date="2027-02-16" aria-label="16 февраля 2027, есть событие">16</a>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <a class="day has-event" href="#" data-date="2027-02-26" aria-label="26 февраля 2027, есть событие">26</a>
+              <span class="day">27</span>
+              <span class="day">28</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Март 2027" data-month="2" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="2" data-year="2027">Март 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:1">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <a class="day has-event" href="#" data-date="2027-03-04" aria-label="4 марта 2027, есть событие">4</a>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <a class="day has-event" href="#" data-date="2027-03-10" aria-label="10 марта 2027, есть событие">10</a>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <a class="day has-event" href="#" data-date="2027-03-23" aria-label="23 марта 2027, есть событие">23</a>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <a class="day has-event" href="#" data-date="2027-03-26" aria-label="26 марта 2027, есть событие">26</a>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Апрель 2027" data-month="3" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="3" data-year="2027">Апрель 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:4">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Май 2027" data-month="4" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="4" data-year="2027">Май 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:6">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Июнь 2027" data-month="5" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="5" data-year="2027">Июнь 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:2">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Июль 2027" data-month="6" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="6" data-year="2027">Июль 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:4">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Август 2027" data-month="7" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="7" data-year="2027">Август 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:7">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Сентябрь 2027" data-month="8" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="8" data-year="2027">Сентябрь 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:3">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Октябрь 2027" data-month="9" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="9" data-year="2027">Октябрь 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:5">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Ноябрь 2027" data-month="10" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="10" data-year="2027">Ноябрь 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:1">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+            </div>
+          </article>
+          <article class="month" aria-label="Декабрь 2027" data-month="11" data-year="2027">
+            <h2><a class="month__link" href="#" data-month="11" data-year="2027">Декабрь 2027</a></h2>
+            <div class="month__weekdays" aria-hidden="true"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div>
+            <div class="month__days">
+              <span class="day" style="grid-column-start:3">1</span>
+              <span class="day">2</span>
+              <span class="day">3</span>
+              <span class="day">4</span>
+              <span class="day">5</span>
+              <span class="day">6</span>
+              <span class="day">7</span>
+              <span class="day">8</span>
+              <span class="day">9</span>
+              <span class="day">10</span>
+              <span class="day">11</span>
+              <span class="day">12</span>
+              <span class="day">13</span>
+              <span class="day">14</span>
+              <span class="day">15</span>
+              <span class="day">16</span>
+              <span class="day">17</span>
+              <span class="day">18</span>
+              <span class="day">19</span>
+              <span class="day">20</span>
+              <span class="day">21</span>
+              <span class="day">22</span>
+              <span class="day">23</span>
+              <span class="day">24</span>
+              <span class="day">25</span>
+              <span class="day">26</span>
+              <span class="day">27</span>
+              <span class="day">28</span>
+              <span class="day">29</span>
+              <span class="day">30</span>
+              <span class="day">31</span>
+            </div>
+          </article>
+      </div>
+      <div class="months-fade months-fade--left"></div><div class="months-fade months-fade--right"></div>
+      <button class="month-arrow month-arrow--prev" type="button" aria-label="Предыдущий месяц"><span></span></button>
+      <button class="month-arrow month-arrow--next" type="button" aria-label="Следующий месяц"><span></span></button>
+    </div>
+    <div class="table-view content-width" id="table-view" role="region" aria-label="Таблица отчетности" hidden>
+      <table>
+        <caption class="sr-only">Отчетность за 2027 год</caption>
+        <colgroup><col class="report-table__date"><col class="report-table__action"><col class="report-table__period"><col class="report-table__category"><col class="report-table__audience"></colgroup>
+        <thead><tr><th scope="col">Дата</th><th scope="col">Что нужно сделать</th><th scope="col">Отчётный период</th><th scope="col">Вид отчётности</th><th scope="col">Для кого</th></tr></thead>
+        <tbody>
+          <tr class="table-month-group"><th colspan="5"><h2>Январь 2027</h2></th></tr>
+          <tr>
+            <td data-label="Дата"><a class="table-date" href="#" data-date="2027-01-15" aria-label="15 января 2027"><strong>15</strong><span>янв</span></a></td>
+            <td class="table-action" data-label="Что нужно сделать">Перечислить<br class="table-action-break"> взносы на травматизм</td>
+            <td data-label="Отчётный период">Дек 2026</td>
+            <td data-label="Вид отчётности">Страховые взносы</td>
+            <td data-label="Для кого">Организации</td>
+          </tr>
+          <tr>
+            <td data-label="Дата"><a class="table-date" href="#" data-date="2027-01-15" aria-label="15 января 2027"><strong>15</strong><span>янв</span></a></td>
+            <td class="table-action" data-label="Что нужно сделать">Перечислить<br class="table-action-break"> взносы на травматизм</td>
+            <td data-label="Отчётный период">Дек 2026</td>
+            <td data-label="Вид отчётности">Страховые взносы</td>
+            <td data-label="Для кого">Организации</td>
+          </tr>
+          <tr>
+            <td data-label="Дата"><a class="table-date" href="#" data-date="2027-01-15" aria-label="15 января 2027"><strong>15</strong><span>янв</span></a></td>
+            <td class="table-action" data-label="Что нужно сделать">Перечислить<br class="table-action-break"> взносы на травматизм</td>
+            <td data-label="Отчётный период">Дек 2026</td>
+            <td data-label="Вид отчётности">Страховые взносы</td>
+            <td data-label="Для кого">Организации</td>
+          </tr>
+          <tr>
+            <td data-label="Дата"><a class="table-date" href="#" data-date="2027-01-15" aria-label="15 января 2027"><strong>15</strong><span>янв</span></a></td>
+            <td class="table-action" data-label="Что нужно сделать">Перечислить<br class="table-action-break"> взносы на травматизм</td>
+            <td data-label="Отчётный период">Дек 2026</td>
+            <td data-label="Вид отчётности">Страховые взносы</td>
+            <td data-label="Для кого">Организации</td>
+          </tr>
+          <tr>
+            <td data-label="Дата"><a class="table-date" href="#" data-date="2027-01-15" aria-label="15 января 2027"><strong>15</strong><span>янв</span></a></td>
+            <td class="table-action" data-label="Что нужно сделать">Перечислить<br class="table-action-break"> взносы на травматизм</td>
+            <td data-label="Отчётный период">Дек 2026</td>
+            <td data-label="Вид отчётности">Страховые взносы</td>
+            <td data-label="Для кого">Организации</td>
+          </tr>
+          <tr>
+            <td data-label="Дата"><a class="table-date" href="#" data-date="2027-01-15" aria-label="15 января 2027"><strong>15</strong><span>янв</span></a></td>
+            <td class="table-action" data-label="Что нужно сделать">Перечислить<br class="table-action-break"> взносы на травматизм</td>
+            <td data-label="Отчётный период">Дек 2026</td>
+            <td data-label="Вид отчётности">Страховые взносы</td>
+            <td data-label="Для кого">Организации</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="content-width event-list" id="event-details">
+      <article class="event-card">
+        <div class="event-card__date"><span class="event-card__day">15</span><span class="event-card__month"><span class="event-card__month-full">января</span><span class="event-card__month-short">янв</span></span></div>
+        <div class="event-card__body"><p class="event-card__category">Страховые взносы</p><h2>Уплата страховых<br> взносов на травматизм</h2><p class="event-card__description">За декабрь 2026 года. Для плательщиков страховых взносов, производящих выплаты физическим лицам.</p></div>
+      </article>
+    </div>
+    <noscript><p class="content-width">Для перелистывания месяцев и переключения вида включите JavaScript.</p></noscript>
+  </section>
+
+  <div class="content-width">
+    <section class="guide" aria-labelledby="guide-title">
+      <div class="guide__content">
+        <div class="guide__tags"><span>Бесплатно</span><span>PDF</span></div>
+        <h2 id="guide-title">Отчётность и аудит<br>без ошибок в 2026/27</h2>
+        <p>Методичка с главбухом: практические материалы по документам, НДС, НДФЛ и подготовке отчётности к обязательному аудиту</p>
+        <a class="button button--white" href="#" data-action="guide">Скачать бесплатно</a>
+      </div>
+      <div class="guide__art" aria-hidden="true">
+        <div class="guide__layer"><img class="guide__shadow" src="./images/guide-shadow.svg" width="476.5" height="481" alt=""><img class="guide__book" src="./images/guide.png" width="341" height="374" alt=""></div>
+        <div class="guide__layer"><img class="guide__shadow" src="./images/guide-shadow.svg" width="476.5" height="481" alt=""><img class="guide__book" src="./images/guide.png" width="341" height="374" alt=""></div>
+      </div>
+      <div class="guide__mobile-art" aria-hidden="true">
+        <img class="guide__mobile-shadow" src="./images/mobile-guide-shadow.svg" width="408.489" height="411.877" alt="">
+        <img class="guide__mobile-shadow-wide" src="./images/mobile-guide-shadow-wide.svg" width="538.489" height="411.877" alt="">
+        <img class="guide__mobile-book" src="./images/mobile-guide.png" width="257.711" height="281.999" alt="">
+      </div>
+    </section>
+    <section class="instructions" aria-label="О календаре">
+      <article><picture><source media="(max-width:700px)" srcset="./images/mobile-calendar.svg"><img src="./images/calendar.svg" width="24" height="24" alt=""></picture><div><h2>Календарь бухгалтера: сроки отчетности и уплаты налогов</h2><p>Налоговый календарь помогает отслеживать сроки сдачи отчетности<br class="desktop-break"> и оплаты налогов. Сверяйте даты и график платежей в удобном формате.</p></div></article>
+      <article><picture><source media="(max-width:700px)" srcset="./images/mobile-list.svg"><img src="./images/list.svg" width="24" height="24" alt=""></picture><div><h2>Какие отчеты сдавать в 2026–2027 годах</h2><p>В календаре собраны НДФЛ, НДС, РСВ, налог на прибыль и имущество, бухгалтерская и статистическая отчетность, страховые взносы и уведомления по ЕНП.</p></div></article>
+      <article><picture><source media="(max-width:700px)" srcset="./images/mobile-settings.svg"><img src="./images/settings.svg" width="24" height="24" alt=""></picture><div><h2>Как пользоваться календарем и таблицей</h2><p>Выберите год и месяц, затем уточните вид отчетности или тип события. Переключайтесь между календарем и таблицей для просмотра сроков.</p></div></article>
+    </section>
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Частые вопросы</h2>
+      <details><summary>До какого числа платить налоги в 2026 году?<span class="faq__icon" aria-hidden="true"></span></summary><p>Выберите 2026 год и нужный месяц. Нажмите на отмеченную дату, чтобы посмотреть событие и его описание.</p></details>
+      <details><summary>Где посмотреть сроки сдачи отчетности<br class="desktop-break"> в 2026–2027 годах?<span class="faq__icon" aria-hidden="true"></span></summary><p>Выберите год в переключателе над календарем. Даты можно просматривать по месяцам или в табличном виде.</p></details>
+      <details><summary>Какие отчеты сдавать в конкретном месяце?<span class="faq__icon" aria-hidden="true"></span></summary><p>Перейдите к нужному месяцу с помощью стрелок. Используйте фильтр по виду отчетности, чтобы уточнить список событий.</p></details>
+      <details><summary>Когда подавать уведомление по ЕНП?<span class="faq__icon" aria-hidden="true"></span></summary><p>Выберите тип события «Уведомление» и проверьте отмеченные даты выбранного года.</p></details>
+      <details><summary>Где посмотреть сроки сдачи РСВ<br class="desktop-break"> и статистической отчетности?<span class="faq__icon" aria-hidden="true"></span></summary><p>Используйте фильтр по виду отчетности и переключатель формата просмотра над календарем.</p></details>
+    </section>
+  </div>
+  <section class="cta" aria-labelledby="cta-title"><h2 id="cta-title">Ещё не в Smartway?<br>Попробуйте сервис бесплатно</h2><a class="button" href="#" data-action="trial">Скачать бесплатно</a></section>
+</main>
+</body>
+</html>
