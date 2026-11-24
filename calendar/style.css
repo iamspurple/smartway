@@ -444,7 +444,7 @@ a.day:not([aria-current="date"]):hover {
 .guide__content {
   position: relative;
   z-index: 1;
-  padding: 28px 38px;
+  padding: 28px 38px 26px;
   width: 458px;
   pointer-events: none;
 }
@@ -498,22 +498,17 @@ a.day:not([aria-current="date"]):hover {
   background: #fff;
   color: #272727;
 }
-.guide__art,
-.guide__layer {
+.guide__art {
   position: absolute;
   inset: 0;
   pointer-events: none;
 }
-.guide__book {
+.guide__art img {
   position: absolute;
-  top: -3px;
-  left: 444px;
-  object-fit: cover;
-}
-.guide__shadow {
-  position: absolute;
-  top: -22px;
-  left: 285.5px;
+  top: 0;
+  left: 264.5px;
+  width: 499.5px;
+  height: auto;
 }
 .instructions {
   display: grid;
@@ -704,12 +699,6 @@ a.day:not([aria-current="date"]):hover {
   align-items: flex-start;
   gap: 4px;
 }
-.is-table-view .guide__book {
-  left: 422.5px;
-}
-.is-table-view .guide__shadow {
-  left: 264px;
-}
 @media (max-width: 1000px) {
   .months-track {
     left: calc(50% - 290.5px);
@@ -817,30 +806,6 @@ a.day:not([aria-current="date"]):hover {
   .event-card__description {
     font-size: 14px;
   }
-  .guide {
-    margin-top: 24px;
-  }
-  .guide__content {
-    padding: 24px;
-    width: 100%;
-    max-width: 430px;
-  }
-  .guide h2 {
-    font-size: 25px;
-    line-height: 26px;
-  }
-  .guide p {
-    font-size: 14px;
-    max-width: 270px;
-    margin-bottom: 24px;
-  }
-  .guide__art {
-    left: auto;
-    width: 764px;
-    right: -170px;
-    opacity: 0.35;
-    z-index: -1;
-  }
   .instructions {
     gap: 24px;
     margin-top: 28px;
@@ -888,12 +853,6 @@ a.day:not([aria-current="date"]):hover {
   }
   .table-view {
     padding: 0;
-  }
-  .is-table-view .guide__book {
-    left: 444px;
-  }
-  .is-table-view .guide__shadow {
-    left: 285.5px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -987,7 +946,6 @@ a.day:not([aria-current="date"]):hover {
   display: contents;
 }
 .mobile-month-nav,
-.guide__mobile-art,
 .event-card__month-short {
   display: none;
 }
@@ -1207,7 +1165,6 @@ a.day:not([aria-current="date"]):hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: none;
     width: 100%;
     padding: 20px 13px 0;
     text-align: center;
@@ -1237,31 +1194,16 @@ a.day:not([aria-current="date"]):hover {
     border-radius: 24px;
   }
   .guide__art {
-    display: none;
-  }
-  .guide__mobile-art {
-    display: block;
     position: relative;
+    inset: auto;
     width: 318px;
     height: 174px;
     margin: 15px auto 0;
-    pointer-events: none;
   }
-  .guide__mobile-shadow {
-    position: absolute;
-    left: -101.25px;
-    top: -49.93px;
-  }
-  .guide__mobile-shadow-wide {
-    position: absolute;
-    left: -232.25px;
-    top: -49.93px;
-  }
-  .guide__mobile-book {
-    position: absolute;
-    left: 40.86px;
+  .guide__art img {
+    left: -79px;
     top: -11px;
-    object-fit: cover;
+    width: 378px;
   }
   .instructions {
     margin-top: 24px;
