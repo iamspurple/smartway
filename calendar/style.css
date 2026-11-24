@@ -598,6 +598,7 @@ a.day:not([aria-current="date"]):hover {
   min-width: 220px;
 }
 .table-view {
+  width: min(992px, calc(100% - 32px));
   padding: 0;
   overflow: visible;
 }
@@ -615,7 +616,7 @@ a.day:not([aria-current="date"]):hover {
   width: 10.602094%;
 }
 .report-table__action {
-  width: 26.832461%;
+  width: 22%;
 }
 .report-table__period {
   width: 18.324607%;
@@ -624,7 +625,7 @@ a.day:not([aria-current="date"]):hover {
   width: 21.073298%;
 }
 .report-table__audience {
-  width: 23.167539%;
+  width: 28%;
 }
 .table-view th {
   height: 51px;
@@ -902,7 +903,7 @@ a.day:not([aria-current="date"]):hover {
   }
 }
 
-@media (max-width: 799px) {
+@media (width < 1024px) {
   .table-view table {
     display: block;
     margin: 0;
@@ -1344,10 +1345,11 @@ a.day:not([aria-current="date"]):hover {
 }
 
 .mobile-table-month-title,
-.table-month-group {
+.table-month-group,
+.table-action-break {
   display: none;
 }
-@media (max-width: 799px) {
+@media (width < 1024px) {
   .table-view tbody {
     gap: 12px;
   }
@@ -1450,14 +1452,17 @@ a.day:not([aria-current="date"]):hover {
     font-size: 22px;
     line-height: 1.25;
   }
-}
-@media (max-width: 700px) {
+  .table-action-break {
+    display: initial;
+  }
   .is-table-view .calendar-toolbar {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: 6px 8px;
+    gap: 8px;
+    width: 100%;
   }
   .is-table-view .mobile-table-month-title {
     display: block;
@@ -1468,19 +1473,18 @@ a.day:not([aria-current="date"]):hover {
     flex: none;
     padding: 4px 0;
   }
-  .is-table-view .calendar-controls {
-    margin-bottom: 16px;
-  }
   .is-table-view .table-month-group:first-child {
     display: none;
   }
 }
-
-.table-action-break {
-  display: none;
+@media (max-width: 700px) {
+  .is-table-view .calendar-controls {
+    margin-bottom: 16px;
+  }
 }
-@media (max-width: 799px) {
-  .table-action-break {
-    display: initial;
+@media (max-width: 340px) {
+  .is-table-view .calendar-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
