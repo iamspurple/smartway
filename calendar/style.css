@@ -383,12 +383,13 @@ a.day:not([aria-current="date"]):hover {
   grid-template-columns: 152px 1fr;
   gap: 44px;
   padding: 19px 59px 19px 0;
-  background: #fff url("./images/event-card.svg") center/100% 100% no-repeat;
+  background: #fff;
   border-radius: 24px;
 }
 .event-card__date {
   text-align: center;
   padding-top: 8px;
+  border-right: 1px solid #e8e8e8;
 }
 .event-card__day {
   display: block;
@@ -589,7 +590,6 @@ a.day:not([aria-current="date"]):hover {
 .cta {
   padding: 0 16px;
   text-align: center;
-  margin-top: 100px;
 }
 .cta h2 {
   margin-bottom: 24px;
@@ -1332,9 +1332,7 @@ a.day:not([aria-current="date"]):hover {
     align-items: center;
     justify-content: center;
     gap: 24px;
-    min-height: 292px;
-    margin-top: 24px;
-    padding: 24px 16px;
+    margin-top: 11px;
   }
   .cta h2 {
     max-width: 332px;
