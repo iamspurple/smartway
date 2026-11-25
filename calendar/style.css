@@ -525,6 +525,7 @@ a.day:not([aria-current="date"]):hover {
   flex: none;
 }
 .instructions h2 {
+  letter-spacing: 0;
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 5px;
